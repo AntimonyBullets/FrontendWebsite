@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #arrow {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .arrow-line {
+            background-color: white;
+            height: 2px;
+        }
+
+        #arrow-line-1 {
+            width: 40px;
+            height: 2px;
+        }
+
+        #arrow-line-2 {
+            width: 16px;
+            transform: rotate(30deg);
+            position: absolute;
+            left: 29px;
+            top: 53px;
+        }
+        #arrow-line-3{
+            width: 16px;
+            transform: rotate(-30deg);
+            position: absolute;
+            left: 29px;
+            bottom: 53px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="arrow">
+        <div id="arrow-line-1" class="arrow-line"></div>
+        <div id="arrow-line-2" class="arrow-line"></div>
+        <div id="arrow-line-3" class="arrow-line"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODERIX</title>
+    <link rel="stylesheet" href="src/header.css">
+    <link rel="stylesheet" href="src/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <img src="src/coderix-removebg-preview.png" alt="">
+            </div>
+            <ul id="icons">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+            </ul>
+        </div>
+        
+    </header>
+    <nav>
+        <div id="menu-icon">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <ul id="list">
+            <li><a href="#"><i class="fa fa-home" style="font-size:1.2rem"></i><span
+                        class="nav-span">Home</span></a></li>
+            <li><a href="#"><i class="fa fa-info-circle" style="color: white; font-size: 1.2rem;"></i><span
+                        class="nav-span">About Us</span></a></li>
+            <li><a href="#"><i class="fa fa-phone-square" style="font-size: 1.2rem;"></i><span
+                        class="nav-span">Contact
+                    </span></a></li>
+        </ul>
+    </nav>
+    <div id="sidebar">
+        <div id="arrow">
+            <div id="arrow-line-1" class="arrow-line"></div>
+            <div id="arrow-line-2" class="arrow-line"></div>
+            <div id="arrow-line-3" class="arrow-line"></div>
+        </div>
+        <div id="search">
+            <input type="text" id = 'search-box' placeholder="Search here">
+            <i class="fa fa-search" id = 'search-icon' style="font-size:30px; color: white"></i>
+        </div>
+        <ul id="sidebar-links">
+            <li class="sidebar-link"><a href = "#">All courses</a></li>
+            <li class="sidebar-link"><a href = "#">Javascript</a></li>
+            <li class="sidebar-link"><a href = "#">Java</a></li>
+            <li class="sidebar-link"><a href = "#">Python</a></li>
+            <li class="sidebar-link"><a href = "#">C++</a></li>
+            <li class="sidebar-link"><a href = "#">Web Development</a></li>
+            <li class="sidebar-link"><a href = "#">App Development</a></li>
+            <li class="sidebar-link"><a href = "#">Frameworks</a></li>
+            <li class="sidebar-link"><a href = "#">Other</a></li>
+        </ul>
+        <div id="btn-1" class="btn">Sign up</div>
+        <div id="btn-2" class="btn">Log in</div>
+    </div>
+    <div id ="sign-up">
+        <h1 id = 'signup-heading'>Create your account</h2>
+            <div id="user-details">
+                <input type="text" name = 'username' id = 'email' placeholder="Enter your e-mail" class="myInput">
+                <div id="empty-email">E-mail cannot be empty</div>
+                <input type="text" name="username" id="username" placeholder="Enter a username" class="myInput">
+                <div id="empty-username">The username cannot be empty</div>
+                <input type="text" name="password" id="password" placeholder="Enter a password" class="myInput">
+                <div id="empty-password">Password must have at least 8 characters</div>
+                <p id = 'login-ask'>Already have an account?<a href="#"> Log in</a></p>
+                <button id="signup-continue">Continue</button>
+            </div>
+            <div id="cross">
+                <div class="cross-part" id="cross-1"></div>
+                <div class="cross-part" id="cross-2"></div>
+            </div>
+            <div id="overlay-1"></div>
+        </div>
+        <div id = 'overlay'></div>
+        <script src="src/script.js"></script>
+        <div id = 'section-1'>
+            <div id="section-1-text">
+                <div id="upper-text">
+                    Welcome to <span>CODERIX</span>
+                </div>
+                <div id = "lower-text">
+                    Where you can learn, from basic to ultra-professional programming
+                </div>
+            </div>
+            <img src="src/programmer.png" id="section-1-image">
+        </div>
+</body>
+
+</html>

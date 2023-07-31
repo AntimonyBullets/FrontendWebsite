@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Kanit&family=PT+Sans:wght@700&family=Roboto:wght@500&family=Secular+One&family=Ubuntu:wght@500&display=swap');
+#section-1{
+    display: flex;
+    color: white;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#section-1-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+}
+#upper-text{
+    font-size: 2.9rem;
+}
+#upper-text span{
+    animation-name: colorChange;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    font-weight: bold;
+    color: rgb(149, 57, 163);
+}
+#lower-text{
+    font-size: 1rem;
+    position: relative;
+    bottom: 18px;
+}
+#section-1-image{
+    height: 400px;
+    filter: invert();
+}
+@keyframes colorChange {
+    0%{
+        color: rgb(149, 57, 163);
+    }
+    50%{
+        color: rgb(80, 157, 216);
+    }
+}
