@@ -22,7 +22,18 @@ cross.addEventListener('click',()=>{
     signUpWindow.style.display = 'none';
     overlay.style.display = 'none';
 })
+let overlay1 = document.getElementById('overlay-1');
+function validity(){
+    if(usernameValid === true && passwordValid === true && emailValid === true){
+        overlay1.style.display = 'none';
+    }
+    else{
+        overlay1.style.display = 'block';
+    }
+}
 let emailValid = false;
+let usernameValid = false;
+let passwordValid = false;
 let email = document.getElementById('email');
 let emptyEmail = document.getElementById('empty-email');
 email.addEventListener('focusin', (e)=>{
@@ -43,17 +54,18 @@ email.addEventListener('input', ()=>{
         email.style.borderBottom = '1px solid rgb(0, 191, 255)';
         emptyEmail.style.display = 'none';
         emailValid = true;
+        validity();
     }
     else{
         email.style.borderBottom = '1px solid red';
         emptyEmail.style.display = 'block';
         emailValid = false;
+        validity();
     }
 })
 let username = document.getElementById('username');
 let takenUsername = ['a', 'b', 'c', 'alpha', 'beta', 'gamma', 'rudraksh', 'antony', 'jingping'];
 let emptyUsername = document.getElementById('empty-username');
-let usernameValid = false;
 username.addEventListener('focusin', (e)=>{
     if(e.target.value.length > 0){
         username.style.borderBottom = '1px solid rgb(0, 191, 255)';
@@ -80,19 +92,20 @@ username.addEventListener('input', ()=>{
             emptyUsername.style.display = 'none';
             username.style.borderBottom = '1px solid rgb(0, 191, 255)';
             usernameValid = true;
+            validity();
         }
         else{
             emptyUsername.style.display = 'block';
             username.style.borderBottom = '1px solid red';
             username.value.length === 0 ? emptyUsername.innerHTML = 'The username cannot be empty' : emptyUsername.innerHTML = 'The username has already been taken';
             usernameValid = false;
+            validity();
             break;
         }
     }
 })
 let password = document.getElementById('password');
 let emptyPassword = document.getElementById('empty-password');
-let passwordValid = false;
 password.addEventListener('focusin', (e)=> {
     if(e.target.value.length >= 8){
         password.style.borderBottom = '1px solid rgb(0, 191, 255)';
@@ -111,13 +124,20 @@ password.addEventListener('input', ()=>{
         password.style.borderBottom = '1px solid rgb(0, 191, 255)';
         emptyPassword.style.display = 'none';
         passwordValid = true;
+        validity();
     }
     else{
         password.style.borderBottom = '1px solid red';
         emptyPassword.style.display = 'block';
         passwordValid = false;
+        validity();
     }
 })
-setInterval(() => {
-    console.log(usernameValid)
-}, 1000);
+let myInput = document.querySelectorAll(".myInput");
+myInput.forEach(function(e) {
+    e.addEventListener('keydown', function(event) {
+      if (event.keyCode === 32) {
+        event.preventDefault();
+      }
+    });
+  });

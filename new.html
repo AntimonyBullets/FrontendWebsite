@@ -63,10 +63,10 @@
     <script>
         let inputElements = document.querySelectorAll(".myInput");
 
-inputElements.forEach(function(inputElement) {
-  inputElement.addEventListener("keydown", function(event) {
+inputElements.forEach(function(i) {
+  i.addEventListener("keydown", function(event) {
     if (event.keyCode === 32) {
-      event.preventDefault(); // Prevent space key's default action
+      event.preventDefault();
     }
   });
 });
