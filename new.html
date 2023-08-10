@@ -60,6 +60,17 @@
         <div id="arrow-line-2" class="arrow-line"></div>
         <div id="arrow-line-3" class="arrow-line"></div>
     </div>
+    <script>
+        let inputElements = document.querySelectorAll(".myInput");
+
+inputElements.forEach(function(inputElement) {
+  inputElement.addEventListener("keydown", function(event) {
+    if (event.keyCode === 32) {
+      event.preventDefault(); // Prevent space key's default action
+    }
+  });
+});
+    </script>
 </body>
 
 </html>
