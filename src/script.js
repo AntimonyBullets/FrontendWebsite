@@ -75,29 +75,16 @@ username.addEventListener('focusout', ()=>{
     emptyUsername.style.display = 'none';
 })
 username.addEventListener('input', ()=>{
-    if(username.value.length > 0){
-        username.style.borderBottom = '1px solid rgb(0, 191, 255)';
-        emptyUsername.style.display = 'none';
-        for (const elements of takenUsername) {
-            if(username.value === elements){
-                username.style.borderBottom = '1px solid red';
-                emptyUsername.style.display = 'block';
-                emptyUsername.innerHTML = 'The username has already been taken';
-                usernameValid = false;
-            }
-        }
-    }
-    else{
-        username.style.borderBottom = '1px solid red';
-        emptyUsername.style.display = 'block';
-        emptyUsername.innerHTML = 'The username cannot be empty';
-        usernameValid = false;
-    }
     for (const elements of takenUsername) {
         if(username.value.length > 0 && username.value !== elements){
+            emptyUsername.style.display = 'none';
+            username.style.borderBottom = '1px solid rgb(0, 191, 255)';
             usernameValid = true;
         }
         else{
+            emptyUsername.style.display = 'block';
+            username.style.borderBottom = '1px solid red';
+            username.value.length === 0 ? emptyUsername.innerHTML = 'The username cannot be empty' : emptyUsername.innerHTML = 'The username has already been taken';
             usernameValid = false;
             break;
         }
@@ -131,3 +118,6 @@ password.addEventListener('input', ()=>{
         passwordValid = false;
     }
 })
+setInterval(() => {
+    console.log(usernameValid)
+}, 1000);
