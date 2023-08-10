@@ -1,62 +1,73 @@
+let navbar = document.querySelector('nav');
 let menuIcon = document.getElementById('menu-icon');
 let sidebar = document.getElementById('sidebar');
-menuIcon.addEventListener('click' , ()=> {
+
+// window.addEventListener('scroll', () => {
+//   const scrollY = window.scrollY;
+//   const scrollThreshold = 50;
+
+//   if (scrollY > scrollThreshold) {
+//     navbar.style.backgroundColor = '#171D23';
+//   } else {
+//     navbar.style.backgroundColor = 'transparent'; 
+//   }
+// });
+menuIcon.addEventListener('click', () => {
     sidebar.classList.toggle('active');
 })
-
 let arrow = document.getElementById('arrow');
-arrow.addEventListener('click', ()=>{
+arrow.addEventListener('click', () => {
     sidebar.classList.toggle('active');
 })
 
 let signUpButton = document.getElementById('btn-1');
 let signUpWindow = document.getElementById('sign-up');
 let overlay = document.getElementById('overlay');
-signUpButton.addEventListener('click', () =>{
+signUpButton.addEventListener('click', () => {
     signUpWindow.style.display = 'block';
     overlay.style.display = 'block';
 })
 
 let cross = document.getElementById('cross');
-cross.addEventListener('click',()=>{
+cross.addEventListener('click', () => {
     signUpWindow.style.display = 'none';
     overlay.style.display = 'none';
 })
-let overlay1 = document.getElementById('overlay-1');
-function validity(){
-    if(usernameValid === true && passwordValid === true && emailValid === true){
-        overlay1.style.display = 'none';
-    }
-    else{
-        overlay1.style.display = 'block';
-    }
-}
 let emailValid = false;
 let usernameValid = false;
 let passwordValid = false;
+let overlay1 = document.getElementById('overlay-1');
+function validity() {
+    if (usernameValid === true && passwordValid === true && emailValid === true) {
+        overlay1.style.display = 'none';
+    }
+    else {
+        overlay1.style.display = 'block';
+    }
+}
 let email = document.getElementById('email');
 let emptyEmail = document.getElementById('empty-email');
-email.addEventListener('focusin', (e)=>{
-    if(e.target.value.length > 0){
+email.addEventListener('focusin', (e) => {
+    if (e.target.value.length > 0) {
         email.style.borderBottom = '1px solid rgb(0, 191, 255)';
     }
-    else{
+    else {
         email.style.borderBottom = '1px solid red';
         emptyEmail.style.display = 'block';
     }
 })
-email.addEventListener('focusout', ()=>{
+email.addEventListener('focusout', () => {
     email.style.borderBottom = '1px solid grey';
     emptyEmail.style.display = 'none';
 })
-email.addEventListener('input', ()=>{
+email.addEventListener('input', () => {
     if (email.value.length > 0) {
         email.style.borderBottom = '1px solid rgb(0, 191, 255)';
         emptyEmail.style.display = 'none';
         emailValid = true;
         validity();
     }
-    else{
+    else {
         email.style.borderBottom = '1px solid red';
         emptyEmail.style.display = 'block';
         emailValid = false;
@@ -66,35 +77,35 @@ email.addEventListener('input', ()=>{
 let username = document.getElementById('username');
 let takenUsername = ['a', 'b', 'c', 'alpha', 'beta', 'gamma', 'rudraksh', 'antony', 'jingping'];
 let emptyUsername = document.getElementById('empty-username');
-username.addEventListener('focusin', (e)=>{
-    if(e.target.value.length > 0){
+username.addEventListener('focusin', (e) => {
+    if (e.target.value.length > 0) {
         username.style.borderBottom = '1px solid rgb(0, 191, 255)';
         for (const elements of takenUsername) {
-            if(e.target.value === elements){
+            if (e.target.value === elements) {
                 username.style.borderBottom = '1px solid red';
                 emptyUsername.style.display = 'block';
                 emptyUsername.innerHTML = 'The username has already been taken';
             }
         }
     }
-    else{
+    else {
         username.style.borderBottom = '1px solid red';
         emptyUsername.style.display = 'block';
     }
 })
-username.addEventListener('focusout', ()=>{
+username.addEventListener('focusout', () => {
     username.style.borderBottom = '1px solid grey';
     emptyUsername.style.display = 'none';
 })
-username.addEventListener('input', ()=>{
+username.addEventListener('input', () => {
     for (const elements of takenUsername) {
-        if(username.value.length > 0 && username.value !== elements){
+        if (username.value.length > 0 && username.value !== elements) {
             emptyUsername.style.display = 'none';
             username.style.borderBottom = '1px solid rgb(0, 191, 255)';
             usernameValid = true;
             validity();
         }
-        else{
+        else {
             emptyUsername.style.display = 'block';
             username.style.borderBottom = '1px solid red';
             username.value.length === 0 ? emptyUsername.innerHTML = 'The username cannot be empty' : emptyUsername.innerHTML = 'The username has already been taken';
@@ -106,27 +117,27 @@ username.addEventListener('input', ()=>{
 })
 let password = document.getElementById('password');
 let emptyPassword = document.getElementById('empty-password');
-password.addEventListener('focusin', (e)=> {
-    if(e.target.value.length >= 8){
+password.addEventListener('focusin', (e) => {
+    if (e.target.value.length >= 8) {
         password.style.borderBottom = '1px solid rgb(0, 191, 255)';
     }
-    else{
+    else {
         password.style.borderBottom = '1px solid red';
         emptyPassword.style.display = 'block';
     }
 })
-password.addEventListener('focusout', ()=>{
+password.addEventListener('focusout', () => {
     password.style.borderBottom = '1px solid grey';
     emptyPassword.style.display = 'none';
 })
-password.addEventListener('input', ()=>{
-    if(password.value.length >= 8){
+password.addEventListener('input', () => {
+    if (password.value.length >= 8) {
         password.style.borderBottom = '1px solid rgb(0, 191, 255)';
         emptyPassword.style.display = 'none';
         passwordValid = true;
         validity();
     }
-    else{
+    else {
         password.style.borderBottom = '1px solid red';
         emptyPassword.style.display = 'block';
         passwordValid = false;
@@ -134,10 +145,10 @@ password.addEventListener('input', ()=>{
     }
 })
 let myInput = document.querySelectorAll(".myInput");
-myInput.forEach(function(e) {
-    e.addEventListener('keydown', function(event) {
-      if (event.keyCode === 32) {
-        event.preventDefault();
-      }
+myInput.forEach(function (e) {
+    e.addEventListener('keydown', function (event) {
+        if (event.keyCode === 32) {
+            event.preventDefault();
+        }
     });
-  });
+});
