@@ -1,17 +1,24 @@
 let navbar = document.querySelector('nav');
 let menuIcon = document.getElementById('menu-icon');
 let sidebar = document.getElementById('sidebar');
+const windowHeight = window.innerHeight;
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const scrollThreshold = 5.5/100 * windowHeight;
 
-// window.addEventListener('scroll', () => {
-//   const scrollY = window.scrollY;
-//   const scrollThreshold = 50;
-
-//   if (scrollY > scrollThreshold) {
-//     navbar.style.backgroundColor = '#171D23';
-//   } else {
-//     navbar.style.backgroundColor = 'transparent'; 
-//   }
-// });
+  if (scrollY > scrollThreshold) {
+    navbar.style.backgroundColor = 'rgba(23,29,35 , 0.5)';
+    navbar.style.backdropFilter = 'blur(5px)';
+    sidebar.style.height = '100vh';
+    sidebar.style.top = '0';
+    sidebar.style.borderTop = 'none';
+  } else {
+    navbar.style.backgroundColor = 'transparent'; 
+    sidebar.style.height = '94.5vh';
+    sidebar.style.top = '5.5vh';
+    sidebar.style.borderTop = '1px solid white';
+  }
+});
 menuIcon.addEventListener('click', () => {
     sidebar.classList.toggle('active');
 })
@@ -152,3 +159,4 @@ myInput.forEach(function (e) {
         }
     });
 });
+console.log(window.innerHeight);
