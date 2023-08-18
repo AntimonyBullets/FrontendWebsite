@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica&family=Kanit&family=PT+Sans:wght@700&family=Roboto:wght@500&family=Secular+One&family=Ubuntu:wght@500&display=swap');
-#section-1{
+
+#section-1 {
     display: flex;
     color: white;
     width: 90%;
@@ -7,17 +8,21 @@
     justify-content: space-around;
     margin-top: 50px;
 }
-#section-1-text{
+
+#section-1-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Kanit', sans-serif;
+    width: 662.88px;
 }
-#upper-text{
+
+#upper-text {
     font-size: 2.9rem;
 }
-#upper-text span{
+
+#upper-text span {
     animation-name: colorChange;
     animation-duration: 1s;
     animation-timing-function: ease;
@@ -25,20 +30,106 @@
     font-weight: bold;
     color: rgb(149, 57, 163);
 }
-#lower-text{
+
+#lower-text {
     font-size: 1rem;
     position: relative;
     bottom: 18px;
 }
-#section-1-image{
+
+#section-1-image {
     height: 400px;
     filter: invert();
 }
+
+#section-2-text {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 22px;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    text-align: justify;
+}
+
+#section-2-images {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-row-gap: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.section-2-img-div {
+    width: 216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-2-images img {
+    height: 120px;
+}
+
+#section-3 {
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-3-img {
+    height: 50px;
+}
+
+.get-started {
+    border: 2px solid white;
+    display: flex;
+    margin-top: 30px;
+    width: 500px;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(11, 17, 32, 1) 0%, rgba(11, 38, 59, 1) 50%, rgba(54, 29, 58, 1) 100%);
+    box-shadow: 3px 5px 10px black;
+}
+
+.get-started:hover {
+    color: black;
+    font-weight: bold;
+    transition-duration: 0.2s;
+    background: linear-gradient(90deg, rgb(43, 62, 110) 0%, rgb(80, 157, 216) 50%, rgb(149, 57, 163) 100%);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.get-started:active {
+    opacity: 0.8;
+}
+
+.get-started .img-div {
+    width: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+
+
 @keyframes colorChange {
-    0%{
+    0% {
         color: rgb(149, 57, 163);
     }
-    50%{
+
+    50% {
         color: rgb(80, 157, 216);
     }
 }
