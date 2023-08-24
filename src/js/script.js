@@ -160,3 +160,15 @@ myInput.forEach(function (e) {
     });
 });
 console.log(window.innerHeight);
+let about = document.getElementById('about');
+let home = document.getElementById('home')
+let about_section = document.getElementById('about-section');
+let home_section = document.getElementById('home-section');
+about.addEventListener('click', ()=>{
+    home_section.style.display = 'none';
+    about_section.style.display = 'block';
+})
+home.addEventListener('click', ()=>{
+    about_section.style.display = 'none';
+    home_section.style.display = 'block';
+})

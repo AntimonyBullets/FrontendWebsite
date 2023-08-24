@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODERIX</title>
-    <link rel="stylesheet" href="src/header.css">
-    <link rel="stylesheet" href="src/home.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="stylesheet" href="src/css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -33,11 +34,11 @@
             <div class="menu-line"></div>
         </div>
         <ul id="list">
-            <li><a href="#"><i class="fa fa-home" style="font-size:1.2rem"></i><span class="nav-span">Home</span></a>
+            <li><a href="#" id = "home"><i class="fa fa-home" style="font-size:1.2rem"></i><span class="nav-span">Home</span></a>
             </li>
-            <li><a href="#"><i class="fa fa-info-circle" style="color: white; font-size: 1.2rem;"></i><span
+            <li><a href="#" id="about"><i class="fa fa-info-circle" style="color: white; font-size: 1.2rem;"></i><span
                         class="nav-span">About Us</span></a></li>
-            <li><a href="#"><i class="fa fa-phone-square" style="font-size: 1.2rem;"></i><span class="nav-span">Contact
+            <li><a href="#" id = "contact"><i class="fa fa-phone-square" style="font-size: 1.2rem;"></i><span class="nav-span">Contact
                     </span></a></li>
         </ul>
     </nav>
@@ -98,11 +99,15 @@
         </div>
         <div id='section-2'>
             <div id="section-2-text">
-                Introducing Coderix: Your ultimate learning destination for programming. From novice to expert, we offer a
-                diverse range of courses including JavaScript, React, Java, Python, C++, PHP, and more. Unveil the world of
+                Introducing Coderix: Your ultimate learning destination for programming. From novice to expert, we offer
+                a
+                diverse range of courses including JavaScript, React, Java, Python, C++, PHP, and more. Unveil the world
+                of
                 coding with our comprehensive curriculum, empowering you to master full-stack development and beyond.
-                Elevate your programming prowess with Coderix today. Discover the power of coding with Coderix, the premier
-                learning platform for programmers. Whether you're taking your first steps or aiming for mastery, our array
+                Elevate your programming prowess with Coderix today. Discover the power of coding with Coderix, the
+                premier
+                learning platform for programmers. Whether you're taking your first steps or aiming for mastery, our
+                array
                 of courses – from JavaScript to React, Java to Python, C++ to PHP – cater to all levels. Unleash your
                 potential through our immersive full-stack development program. Join Coderix now and embark on a
                 transformative coding journey.
@@ -142,14 +147,85 @@
         </div>
     </div>
     <div id="about-section">
-        <div id="about-section-1">
-
+        <div id="who-are-we" class="about-company">
+            <h1 class="about-heading">
+                Who Are We?
+            </h1>
+            <p class="about-description">
+                At Coderix, we are your ultimate learning destination for all things programming. With a strong passion
+                for fostering the growth of developers from novices to experts, we've curated an extensive range of
+                courses that cater to your every coding need. Whether you're just beginning your journey or aiming to
+                reach the highest levels of mastery, Coderix is here to guide you at every step.
+            </p>
+        </div>
+        <div id="vision" class="about-company">
+            <h1 class="about-heading">
+                Vision and Mission
+            </h1>
+            <p class="about-description">
+                Our vision is to unveil the world of coding for individuals across the globe. We believe that
+                programming is an art that empowers you to create, innovate, and shape the digital landscape. Our
+                mission is to provide an all-encompassing learning platform that equips you with the skills and
+                knowledge needed to thrive in the ever-evolving realm of technology. We're dedicated to breaking down
+                barriers to education, making programming accessible to diverse individuals regardless of their
+                background or location. By offering an array of courses that cater to all levels of expertise, we aim to
+                create a supportive and inclusive environment that encourages continuous growth and exploration.
+            </p>
+        </div>
+        <div id="curriculum" class="about-company">
+            <h1 class="about-heading">
+                Comprehensive Curriculum
+            </h1>
+            <p class="about-description">
+                Dive into the realm of coding with our comprehensive curriculum that spans a wide spectrum of languages
+                and technologies. From the foundational languages like JavaScript, Java, and Python to advanced
+                frameworks such as React, Vue, and Angular – we've got it all covered. Our array of courses ensures that
+                you find the perfect fit, whether you're taking your initial steps or seeking to broaden your horizons.
+            </p>
+        </div>
+        <div id="full-stack" class="about-company">
+            <h1 class="about-heading">
+                Empowering Full-Stack Development
+            </h1>
+            <p class="about-description">
+                We understand that the true power of a developer lies in their ability to master the entire stack. Our
+                immersive full-stack development programs empower you with the knowledge and expertise to seamlessly
+                navigate both front-end and back-end technologies. With Coderix, you'll be prepared to take on the
+                challenges of modern software development. Our industry-experienced instructors will guide you in
+                acquiring the skills that bridge the gap between concept and execution, allowing you to create
+                applications that shine in today's competitive tech landscape
+            </p>
+        </div>
+        <div id="founder" , class="about-company">
+            <h1 class="about-heading">
+                WMeet the Founder
+            </h1>
+            <p class="about-description">
+                Coderix was founded by Abhimanyu Purohit, a visionary in the tech industry. With a deep-rooted passion
+                for coding and education, Abhimanyu's mission is to provide accessible and impactful programming
+                education to individuals worldwide. His leadership and expertise guide our commitment to excellence.
+            </p>
+        </div>
+        <div id="future" class="about-company">
+            <h1 class="about-heading">
+                Innovating the Future
+            </h1>
+            <p class="about-description">
+                Exciting things are on the horizon at Coderix. We're thrilled to announce our upcoming online Integrated
+                Development Environment (IDE), powered by generative AI. This revolutionary tool is designed to assist
+                coders in creating programs within minutes. Imagine the possibilities as you harness the synergy between
+                your creativity and cutting-edge technology.
+                Our IDE aims to democratize coding by making it accessible to individuals across various skill levels,
+                enabling rapid prototyping, streamlined development, and enhanced creativity. As we continue to
+                innovate, our vision is to empower programmers with tools that amplify their capabilities and unleash
+                their potential to create groundbreaking solutions.
+            </p>
         </div>
     </div>
     <div id="copyright-section">
         Copyright © 2023 CODERIX | All rights reserved
     </div>
-    <script src="src/script.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>

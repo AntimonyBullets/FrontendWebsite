@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica&family=Kanit&family=PT+Sans:wght@700&family=Roboto:wght@500&family=Secular+One&family=Ubuntu:wght@500&display=swap');
-/* #home-section{
-    display: none;
-} */
+#home-section{
+    display: block;
+}
 #section-1 {
     display: flex;
     color: white;
