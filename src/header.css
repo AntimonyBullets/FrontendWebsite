@@ -433,3 +433,14 @@ nav {
     z-index: 99991;
     display: block;
 }
+#copyright-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    border-top: 1px solid white;
+    margin: auto;
+    height: 8vh;
+    color: white;
+    font-family: 'Geologica', sans-serif;
+}
